@@ -1,0 +1,47 @@
+<div class="container main-content">
+
+<h5>{{title}}</h5>
+
+<div class="topCategoryLinks">
+<ul>
+  <li *ngFor="let topCategoryLinkList of topCategoryLinks">{{ topCategoryLinkList.link }}</li>
+</ul>
+</div>
+
+<!-- <div class="topCategoryLinks">
+<section class="card">
+  <div *ngFor="let topCategoryLinkList of topCategoryLinks">{{ topCategoryLinkList.link }}</div>
+</section>
+</div>
+ -->
+<div class="card-lists">
+
+<div class="card col-3" (click)="viewDetail(universitiesList.stateCode)" routerLinkActive="active" *ngFor="let universitiesList of univeristyData">
+  
+  <img src="assets/images/state-icons/grey/{{ universitiesList.stateCode }}-icon.png"  alt="{{ universitiesList.stateName }}" class="img-responsive" style="max-height: 50px;">
+
+  <div class="card-body col-no-padding" >
+    <h6 class="card-title">{{ universitiesList.stateName }} <a routerLink="/state-universities" class="btn btn-primary">{{ universitiesList.count }}</a></h6>    
+  </div>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<div class="premium-ads">
+      <div class="row white-box premium-ad1">
+        <img src="../assets/images/sliderbanners/banner8.jpg" alt="Premiun Ad1">
+      </div>
+      <div class="row white-box white-second-box col-no-padding">
+        <div class="row white-box premium-ad2 col-sm">
+        <img src="../assets/images/sliderbanners/banner5.jpg" alt="Premiun Ad2">
+        </div>
+        <div class="row white-box premium-ad3 col-sm">
+        <img src="../assets/images/sliderbanners/banner9.jpg" alt="Premiun Ad3">
+        </div>
+      </div> 
+</div>

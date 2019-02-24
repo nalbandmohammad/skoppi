@@ -1,0 +1,215 @@
+<header class="fixed-top">
+      <nav class="navbar navbar-expand-md navbar-dark header-bg row-no-margin ">
+        <a class="navbar-brand" href="#"><span class="logoSym">S</span>Skkopi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+      <!--   <ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+    </li>
+</ul> -->
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item userProfile">
+              <a class="nav-link" href="#"><span class="userProfileIcon">M</span> Mohammad</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-center" href="#">
+              <span tooltip="My Wishlist" placement="left" show-delay="100"><i class="fa fa-heart-o"></i> </span>
+              <span class="sr-only">(current)</span></a>
+            </li>
+             
+            
+          </ul>
+          <div class="form-inline mt-2 mt-md-0">
+            
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="button" data-toggle="modal" data-target="#loginModalCenter">Login</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#signupModalCenter">Signup</button>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid col-no-padding main-navigation box-shadow">
+
+    <nav class="nav d-flex justify-content-between container">
+      <a routerLink="/{{menu}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+      class="nav-link">Home</a> 
+      <a routerLink="/{{menu}}" routerLinkActive="active"
+      class="nav-link" *ngFor="let menu of menuList">{{menu}}</a>                   
+    </nav>
+    </div>
+    </header>
+
+    
+
+    <!-- Modal -->
+<!-- Login Form Model -->    
+<div class="modal fade" id="loginModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+  
+    <div class="modal-content test">
+     <div class="modal-header">
+<h5 class="modal-title text-center" id="exampleModalCenterTitle">Login </h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+ <div class="modal-body">
+
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text"  class="form-control"  />
+        <div  class="invalid-feedback">
+            <div >Username is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password"  class="form-control" />
+        <div class="invalid-feedback">
+            <div>Password is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button  class="btn btn-primary">Login</button>
+    
+        <a class="btn btn-link">Register</a>
+    </div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+<!-- Register Form Model -->
+<div class="modal fade" id="signupModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+  
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Signup</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text"  class="form-control"  />
+        <div  class="invalid-feedback">
+            <div >First Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text"  class="form-control"  />
+        <div  class="invalid-feedback">
+            <div >Last Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text"  class="form-control"  />
+        <div  class="invalid-feedback">
+            <div >Username is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control"  />
+        <div class="invalid-feedback">
+            <div>Password is required</div>
+            <div>Password must be at least 6 characters</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button  class="btn btn-primary">Register</button>
+      
+        <a class="btn btn-link">Cancel</a>
+    </div>
+
+
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <header>
+      <nav class="navbar navbar-expand-md navbar-dark header-bg row-no-margin">
+        <a class="navbar-brand" href="#"><span class="logoSym">S</span>Skkopi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+    </li>
+</ul>
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item userProfile">
+              <a class="nav-link" href="#"><span class="userProfileIcon">M</span> Mohammad</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-center" href="#">
+              <span tooltip="My Wishlist" placement="left" show-delay="100"><i class="fa fa-heart-o"></i> </span>
+              <span class="sr-only">(current)</span></a>
+            </li>
+             
+            
+          </ul>
+          <div class="form-inline mt-2 mt-md-0">
+            
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="button" data-toggle="modal" data-target="#loginModalCenter">Login</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#signupModalCenter">Signup</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container-fluid col-no-padding main-navigation box-shadow">
+
+    <nav class="nav d-flex justify-content-between container">
+            <a routerLink="/{{menu}}" routerLinkActive="active" class="nav-link" *ngFor="let menu of menuList">{{menu}}</a>    	            	
+    </nav>
+    </div>
+
+ 
+<div class="modal fade" id="loginModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+  
+    <div class="modal-content test">
+    <app-login></app-login>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="signupModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+  
+    <div class="modal-content">
+    <app-register></app-register>      
+    </div>
+  </div>
+</div>
+
+ -->

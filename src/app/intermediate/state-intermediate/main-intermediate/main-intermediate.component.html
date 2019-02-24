@@ -1,0 +1,501 @@
+<div class="main-container main-content">
+
+ <div class="card-lists">
+
+<div class="card card-details card-block-details"  routerLinkActive="active" *ngIf="this.universityData">
+
+<!-- <p>Id: {{this.universityData.basicInfo.name}} </p>  -->
+
+  <div class="card-top">
+  	<img [src]="this.universityData.logo"  alt="{{this.universityData.basicInfo.name}}"   class="img-responsive bigImage">
+  	<div class="overlay"></div>
+  </div>  
+  <div class="card-middle">
+  	<img [src]="this.universityData.logo"  alt="{{this.universityData.basicInfo.name}}"   class="img-responsive">
+  	<div class="college-info">
+  	<div class="college-details"><h3>{{this.universityData.basicInfo.name}}</h3></div>
+  	 <div class="college-address"><h6>{{this.universityData.address.city}}</h6></div> 
+  	</div>
+  </div>
+   
+<!--    <div class="college-details"><h3>{{ universityData.name }}</h3></div>
+   <div class="college-address"><h6>{{ universityData.id }}</h6></div>  -->
+
+
+  <!-- <div class="card-body col-no-padding">
+    <h6 class="card-title">{{ stateUniversitiesList.name }} <a routerLink="/state-universities" class="btn btn-primary">{{ stateUniversitiesList.address }}</a></h6>    
+  </div> -->
+</div>
+</div> 
+
+<div class="topCategoryLinks whiteBox">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="category1-tab" data-toggle="tab" href="#category1" role="tab" aria-controls="category1" aria-selected="true">info</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="category2-tab" data-toggle="tab" href="#category2" role="tab" aria-controls="category2" aria-selected="false">Course Fee</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="category3-tab" data-toggle="tab" href="#category3" role="tab" aria-controls="category3" aria-selected="false">Admission</a>
+  </li>
+   <li class="nav-item">
+    <a class="nav-link" id="category4-tab" data-toggle="tab" href="#category4" role="tab" aria-controls="category4" aria-selected="false">Placements</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="category5-tab" data-toggle="tab" href="#category5" role="tab" aria-controls="category5" aria-selected="false">Faculty</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="category6-tab" data-toggle="tab" href="#category6" role="tab" aria-controls="category6" aria-selected="false">Scholorship</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="category7-tab" data-toggle="tab" href="#category7" role="tab" aria-controls="category7" aria-selected="false">Reviews</a>
+  </li>
+</ul>
+<!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li *ngFor="let categoryLinkLists of categoryLinkLists" class="nav-item">
+  <a class="nav-link active" id="category{{$index}}-tab" data-toggle="tab" href="#category{{$index}}" role="tab" aria-controls="category{{$index}}" aria-selected="true">{{ categoryLinkLists.link }}</a>
+  </li>
+</ul> -->
+</div>
+
+<!-- Tab panes -->
+<div class="tab-content data-container">
+
+<!-- info Tab panes -->
+<div class="tab-pane active" id="category1" role="tabpanel" aria-labelledby="category1-tab">
+
+<div class="about-container white-box">
+<p>{{this.basicInform.overview}}</p>
+</div>
+
+<div class="affiliated-links white-box mid-links-container">
+<span class="flag-first">explore affilate colleges</span> 
+<a href="#" class="nobrd">sdgs college, hindupur</a>
+<a href="#">kurnool college, kurnool</a>
+<a href="#">sdgs college, hindupur</a>
+<a href="#">kurnool college, kurnool</a>
+</div>
+
+<div class="affiliated-links white-box mid-links-container">
+<div class="title">
+<span>facilities</span> 
+</div>
+
+<!-- <ul>
+  <li *ngIf="!this.facilities">{{this.facilitiesDetails.library}}</li>
+</ul> -->
+
+
+<a href="#" *ngFor="let facility of this.facilitiesDetails | keyvalue">{{facility.key}}</a>
+
+
+
+</div>
+
+<div class="gallery white-box mid-links-container">
+<div class="title">
+<span>gallery</span> 
+</div>
+
+<div class="gallery-container">
+<ul>
+<li><img src="assets/images/universities/states/andhrapradesh/sku/thumbnails/1.jpg" alt="thumbnails" width="200" height="150"></li>
+<li><img src="assets/images/universities/states/andhrapradesh/sku/thumbnails/2.jpg" alt="thumbnails" width="200" height="150"></li>
+<li><img src="assets/images/universities/states/andhrapradesh/sku/thumbnails/3.jpg" alt="thumbnails" width="200" height="150"></li>
+<li><img src="assets/images/universities/states/andhrapradesh/sku/thumbnails/4.jpg" alt="thumbnails" width="200" height="150"></li>
+</ul>
+</div>
+
+
+</div>
+
+<div class="gallery white-box mid-links-container">
+<div class="title">
+<span>About Location</span> 
+</div>
+
+<div class="location-container">
+<div class="col-6 loc-content-container">
+
+<ul>
+  <li><label>area</label><span>{{this.addressDetails.area}}</span></li>
+  <li><label>transportation</label><span>{{this.universityData.facilities.transport}}</span></li>
+  <li><label>located in</label><span>{{this.universityData.address.locatedIn}}</span></li>
+  <li><label>distance from</label><span>{{this.universityData.address.district}}</span></li>
+  <li><label>kms</label><span>{{this.universityData.address.kilometres}}</span></li>
+  <li><label>pincode</label><span>{{this.universityData.address.pin}}</span></li>
+  <li><label>town</label><span>{{this.universityData.address.city}}</span></li>
+  <li><label>district</label><span>{{this.universityData.address.district}}</span></li>
+  <li><label>city</label><span>{{this.universityData.address.city}}</span></li>
+  <li><label>state</label><span>{{this.universityData.address.state}}</span></li>
+  <li><label>country</label><span>{{this.universityData.address.country}}</span></li>
+  <li><label>bus stand / stop</label><span>{{this.universityData.facilities.busStation}}</span></li>
+  <li><label>airport</label><span>{{this.universityData.facilities.airport}}</span></li>
+</ul>
+</div>
+
+<div class="col-6 loc-map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3860.887555364317!2d77.6518328148403!3d14.605480789799358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1ssku+university+images!5e0!3m2!1sen!2sin!4v1540462577846" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+<!-- info Tab panes -->
+
+
+<!-- Course Fee Tab panes -->
+<div class="tab-pane" id="category2" role="tabpanel" aria-labelledby="category2-tab">
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="cf1-tab" data-toggle="tab" href="#cf1" role="tab" aria-controls="cf1" aria-selected="true">BTech</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="cf2-tab" data-toggle="tab" href="#cf2" role="tab" aria-controls="cf2" aria-selected="false">MTech</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="cf3-tab" data-toggle="tab" href="#cf3" role="tab" aria-controls="cf3" aria-selected="false">MBA</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="cf4-tab" data-toggle="tab" href="#cf4" role="tab" aria-controls="cf4" aria-selected="false">MCA</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="cf5-tab" data-toggle="tab" href="#cf5" role="tab" aria-controls="cf5" aria-selected="false">BPharmacy</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="cf6-tab" data-toggle="tab" href="#cf6" role="tab" aria-controls="cf6" aria-selected="false">MPharmacy</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="cf7-tab" data-toggle="tab" href="#cf7" role="tab" aria-controls="cf7" aria-selected="false">Show More</a>
+  </li>
+</ul>
+
+<div class="tab-content white-box info-tabs">
+<div class="tab-pane col-12 active" id="cf1" role="tabpanel" aria-labelledby="cf1-tab">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="table">
+  <thead>
+  <tr><th>stream</th><th>duration</th><th>semesters</th>
+  <!-- <th>fee</th> -->
+  <th>intake</th>
+  </tr>
+  </thead>
+  <tbody>
+
+
+  <tr *ngFor="let coursesFee of this.coursesDetails.courses">  
+    <td>{{coursesFee.degree}}</td>
+    <td>{{coursesFee.duration}}</td>
+    <td>{{coursesFee.semester}}</td>
+<!--     <td>{{coursesFee.feeYearOne}}</td> -->
+    <td>{{coursesFee.intake}}</td>
+  </tr>
+
+  </tbody>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="table" 
+>
+  <thead>
+  <tr><th>Year1</th><th>Year2</th><th>Year3</th><th>Year4</th><th>Total</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let coursesFee of this.coursesDetails.courses">
+    <td>{{coursesFee.feeYearOne}}</td>
+    <td>{{coursesFee.feeYearTwo}}</td>
+    <td>{{coursesFee.feeYearThree}}</td>
+    <td>{{coursesFee.feeYearFour}}</td>
+    <td>{{coursesFee.totalFee}}</td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="tab-pane" id="cf2" role="tabpanel" aria-labelledby="cf2-tab">
+2
+</div>
+
+<div class="tab-pane" id="cf3" role="tabpanel" aria-labelledby="cf3-tab">
+3
+</div>
+
+<div class="tab-pane" id="cf4" role="tabpanel" aria-labelledby="cf4-tab">
+4
+</div>
+
+<div class="tab-pane" id="cf5" role="tabpanel" aria-labelledby="cf5-tab">
+5
+</div>
+
+<div class="tab-pane" id="cf6" role="tabpanel" aria-labelledby="cf6-tab">
+6
+</div>
+
+<div class="tab-pane" id="cf7" role="tabpanel" aria-labelledby="cf7-tab">
+7
+</div>
+</div>
+
+</div>
+<!-- Course Fee Tab panes -->
+
+<!-- Admission Tab panes -->
+<div class="tab-pane" id="category3" role="tabpanel" aria-labelledby="category3-tab">
+
+<div class="tab-content white-box info-tabs">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="table row-no-margin">
+  <thead>
+  <tr><th>Entrance Name</th><th>Application Start Date</th><th>Application End Date</th><th>Exam Date</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let exam of this.admExamDetails">
+    <td>{{exam.examination}}</td>
+    <td>{{exam.startDate}}</td>
+    <td>{{exam.endDate}}</td>
+    <td>-</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="cf1-tab" data-toggle="tab" href="#cf1" role="tab" aria-controls="cf1" aria-selected="true">BTech</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="cf2-tab" data-toggle="tab" href="#cf2" role="tab" aria-controls="cf2" aria-selected="false">MTech</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="cf3-tab" data-toggle="tab" href="#cf3" role="tab" aria-controls="cf3" aria-selected="false">MBA</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="cf4-tab" data-toggle="tab" href="#cf4" role="tab" aria-controls="cf4" aria-selected="false">MCA</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="cf5-tab" data-toggle="tab" href="#cf5" role="tab" aria-controls="cf5" aria-selected="false">BPharmacy</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="cf6-tab" data-toggle="tab" href="#cf6" role="tab" aria-controls="cf6" aria-selected="false">MPharmacy</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="cf7-tab" data-toggle="tab" href="#cf7" role="tab" aria-controls="cf7" aria-selected="false">Show More</a>
+  </li>
+</ul>
+
+<div class="tab-content white-box info-tabs">
+<div class="tab-pane col-12 active" id="cf1" role="tabpanel" aria-labelledby="cf1-tab">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="table">
+  <tbody>
+   <tr><th>stream</th><td>cse</td><td>civil</td><td>csit</td><td>ece</td><td>eee</td><td>mechanical</td></tr>
+   <tr><th>eligibility criteria</th><td colspan="6" class="textContent">{{this.universityData.admissionDetails.eligibility}}</td></tr>
+  </tbody>
+</table>
+
+<div class="content white-box mid-links-container">
+<div class="title">
+<span>Selection Procedure</span> 
+</div>
+<div class="content-text">
+<p>{{this.universityData.admissionDetails.selection}}</p>
+</div>
+</div>
+
+<div class="content white-box mid-links-container">
+<div class="title">
+<span>Key points to be noted</span> 
+</div>
+<div class="content-text ">
+<ul>
+  <li>{{this.universityData.admissionDetails.keyPoints}}</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="tab-pane" id="cf2" role="tabpanel" aria-labelledby="cf2-tab">
+2
+</div>
+
+<div class="tab-pane" id="cf3" role="tabpanel" aria-labelledby="cf3-tab">
+3
+</div>
+
+<div class="tab-pane" id="cf4" role="tabpanel" aria-labelledby="cf4-tab">
+4
+</div>
+
+<div class="tab-pane" id="cf5" role="tabpanel" aria-labelledby="cf5-tab">
+5
+</div>
+
+<div class="tab-pane" id="cf6" role="tabpanel" aria-labelledby="cf6-tab">
+6
+</div>
+
+<div class="tab-pane" id="cf7" role="tabpanel" aria-labelledby="cf7-tab">
+7
+</div>
+</div>
+
+
+</div>
+<!-- Admission Tab panes -->
+
+<!-- Placements Tab panes -->
+<div class="tab-pane" id="category4" role="tabpanel" aria-labelledby="category4-tab">
+
+<div class="content white-box mid-links-container">
+<div class="title">
+<span>Frequently Visited Companies</span> 
+</div>
+<div class="content-text">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="table row-no-margin">
+  <thead>
+  <tr>
+<!--   <th>Year</th>
+  <th>Company Logo</th> -->
+  <th>Company Name</th>
+  <th>Average Package</th>
+  <th>Highest Package</th>
+<!--   <th>Student Placed</th>
+  <th>Course</th></tr> -->
+  </thead>
+  <tbody>
+    <tr>
+     <!--  <td>2013</td> -->
+    <!--   <td>{{this.universityData.placement.company}}</td> -->
+      <td>{{this.universityData.placement.company}}</td>
+      <td>{{this.universityData.placement.avgPackage}}</td>
+      <td>{{this.universityData.placement.highPackage}}</td>
+<!--       <td>-</td>
+      <td>BE/BTECH</td> -->
+    </tr>
+    
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<!-- Placements Tab panes -->
+
+<!-- Faculty Tab panes -->
+<div class="tab-pane" id="category5" role="tabpanel" aria-labelledby="category5-tab">
+<div class="content white-box mid-links-container">
+<div class="title">
+<span>Faculty Details</span> 
+</div>
+<div class="content-text faculty-container">
+<!-- <ul>
+  <li>Faculty = 120 (Overall)</li>
+  <li>Each Branch = 20</li>
+  <li>Details of Faculty</li>
+</ul> -->
+<div *ngFor="let faculty of facultyDetails">
+  <span>{{faculty.name | titlecase}}</span>
+  <ul>
+  <li>{{faculty.name}}</li>
+  <li>{{faculty.experience}}</li>
+  <li>{{faculty.dept}}</li>
+  <li>{{faculty.qualification}}</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+<!-- Faculty Tab panes -->
+
+
+<!-- Scholorship Tab panes -->
+<div class="tab-pane" id="category6" role="tabpanel" aria-labelledby="category6-tab">
+<div class="content white-box mid-links-container">
+<div class="title">
+<span>Scholarship</span> 
+</div>
+<div class="content-text faculty-container">
+<ul>
+  <li>1. Process of scholarship</li>
+  <li>2. Eligibility</li>
+  <li>3. Details for Scholarship</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Scholorship Tab panes -->
+
+<!-- Reviews Tab panes -->
+<div class="tab-pane" id="category7" role="tabpanel" aria-labelledby="category7-tab">
+<div class="content white-box mid-links-container">
+<div class="title">
+<span>Student Reviews</span> 
+</div>
+<div class="content-text ">
+ <div class="review-container white-box">
+   <div class="review-title">SKU over all review</div>
+   <div class="review-user-details">
+   <div class="review-profile-container">
+   <div class="reviewer-profile">
+    <span>S</span>
+   </div>
+   <div class="reviewer-details">
+    <p>Posted on Feb 25, 2018 by <span>Suhasini</span></p>
+    <p>Batch of 2018 | <span>B.Tech Civil Engineering</span></p>
+   </div>
+   </div>
+   <div class="reviewer-content">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+   </div>
+   </div>
+ </div>
+  <div class="review-container white-box">
+   <div class="review-title">SKU over all review</div>
+   <div class="review-user-details">
+   <div class="review-profile-container">
+   <div class="reviewer-profile">
+    <span>M</span>
+   </div>
+   <div class="reviewer-details">
+    <p>Posted on Feb 25, 2018 by <span>Mateen</span></p>
+    <p>Batch of 2018 | <span>B.Tech Civil Engineering</span></p>
+   </div>
+   </div>
+   <div class="reviewer-content">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+   </div>
+   </div>
+ </div>
+  <div class="review-container white-box">
+   <div class="review-title">SKU over all review</div>
+   <div class="review-user-details">
+   <div class="review-profile-container">
+   <div class="reviewer-profile">
+    <span>A</span>
+   </div>
+   <div class="reviewer-details">
+    <p>Posted on Feb 25, 2018 by <span>Arun Kumar</span></p>
+    <p>Batch of 2018 | <span>B.Tech Civil Engineering</span></p>
+   </div>
+   </div>
+   <div class="reviewer-content">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+   </div>
+   </div>
+ </div>
+</div>
+</div>
+</div>
+<!-- Reviews Tab panes -->
+
+
+</div>
+
+
+
+

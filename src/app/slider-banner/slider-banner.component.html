@@ -1,0 +1,333 @@
+ <main role="main">
+
+ <div class="main-search-banner">
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="../assets/images/sliderbanners/IIMA.webp" alt="First slide">
+                   </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="../assets/images/sliderbanners/bg05.webp" alt="Second slide">
+           
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="../assets/images/sliderbanners/banner8.jpg" alt="Third slide">
+            
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="form container mainSearch carousel-caption">
+        <div>
+            <div class="row form-inline">
+            <select class="form-control">
+            <option>Select State</option>
+            <option *ngFor="let states of statesList">{{states}}</option>
+            </select>
+            <select class="form-control">
+            <option>Select City</option>
+            <option *ngFor="let cities of citiesList">{{cities}}</option>
+            </select> 
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                   
+            </div>
+        
+        </div>
+      </div>
+
+      </div>
+
+      <div class="categories">
+        <!-- Nav tabs -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="category1-tab" data-toggle="tab" href="#category1" role="tab" aria-controls="category1" aria-selected="true">Colleges</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="category2-tab" data-toggle="tab" href="#category2" role="tab" aria-controls="category2" aria-selected="false">Schools</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="category3-tab" data-toggle="tab" href="#category3" role="tab" aria-controls="category3" aria-selected="false">10+2</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="category4-tab" data-toggle="tab" href="#category4" role="tab" aria-controls="category4" aria-selected="false">Job Oriented Courses</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="category5-tab" data-toggle="tab" href="#category5" role="tab" aria-controls="category5" aria-selected="false">Exams</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content container">
+<div class="tab-pane active" id="category1" role="tabpanel" aria-labelledby="category1-tab">
+  <ul class="categories-container">
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/teacher-with-laptop.png" width="30" height="30"></span>
+        <label>management</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/ruler-and-pencil.png" width="30" height="30"></span>
+        <label>engineering</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/stethoscope-medical-tool.png" width="30" height="30"></span>
+        <label>medical</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/book-with-apple.png" width="30" height="30"></span>
+        <label>agriculture</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/violin.png" width="30" height="30"></span>
+        <label>arts</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/earth-globe-with-grid.png" width="30" height="30"></span>
+        <label>aviation</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/numbering.png" width="30" height="30"></span>
+        <label>commerce</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/nurse.png" width="30" height="30"></span>
+        <label>dental</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/teacher-pointing-a-board-with-a-stick.png" width="30" height="30"></span>
+        <label>education</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/diploma-roll.png" width="30" height="30"></span>
+        <label>law</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/chemistry-science-experiment.png" width="30" height="30"></span>
+        <label>paramedical</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/medical-drugs-pills-and-capsules.png" width="30" height="30"></span>
+        <label>pharmacy</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/mouse-pointer-arrow-on-laptop-black-screen.png" width="30" height="30"></span>
+        <label>computer applications</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/online-instructor.png" width="30" height="30"></span>
+        <label>mass communciation</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/rectangular-eyeglasses-shape.png" width="30" height="30"></span>
+        <label>veterinary sciences</label>
+      </li>
+      <li routerLink="/colleges-categories">
+        <span><img src="../assets/images/categories-icons/apple-black-silhouette-with-a-leaf.png" width="30" height="30"></span>
+        <label>hotel management</label>
+      </li>
+      
+      
+  </ul>
+</div>
+  <div class="tab-pane" id="category2" role="tabpanel" aria-labelledby="category2-tab">
+    <ul class="card-layout">
+      
+      <li>
+          <button type="button" class="btn btn-primary" routerLink="/category-schools" >
+          Play Schools <!-- <span class="badge badge-light">4</span> -->
+          </button>
+      </li>
+      <li>
+      <button type="button" class="btn btn-primary" routerLink="/category-schools">
+          CBSE 
+          </button>
+        
+      </li>
+      <li>
+      <button type="button" class="btn btn-primary" routerLink="/category-schools">
+          ICSE
+          </button>
+        
+      </li>
+      <li>
+      <button type="button" class="btn btn-primary" routerLink="/category-schools">
+        State
+          </button>
+        
+      </li>
+      <li>
+      <button type="button" class="btn btn-primary" routerLink="/category-schools">
+          Special Schools 
+          </button>
+       
+      </li>
+      <li>
+      <button type="button" class="btn btn-primary" routerLink="/category-schools">
+          Govt Schools 
+          </button>
+       
+      </li>
+
+      
+  </ul>
+  </div>
+  <div class="tab-pane" id="category3" role="tabpanel" aria-labelledby="category3-tab">
+    <ul class="card-layout">
+      
+
+     <li>
+          <button type="button" class="btn btn-primary" routerLink="/intermediate-categories">
+          MHEC <!-- <span class="badge badge-light">4</span> -->
+          </button>
+      </li>
+      <li>
+      <button type="button" class="btn btn-primary" routerLink="/intermediate-categories">
+          MPC 
+          </button>
+        
+      </li>
+      <li>
+      <button type="button" class="btn btn-primary" routerLink="/intermediate-categories">
+          BiPC
+          </button>
+        
+      </li>
+      <li>
+      <button type="button" class="btn btn-primary" routerLink="/intermediate-categories">
+        MEC 
+          </button>
+        
+      </li>
+      <li>
+      <button type="button" class="btn btn-primary" routerLink="/intermediate-categories">
+          CEC
+          </button>
+       
+      </li>
+      <li>
+      <button type="button" class="btn btn-primary" routerLink="/intermediate-categories">
+          HEC 
+          </button>
+       
+      </li>
+
+      <li>
+      <button type="button" class="btn btn-primary" routerLink="/intermediate-categories">
+          MBiPC
+          </button>
+       
+      </li>
+      <li>
+      <button type="button" class="btn btn-primary" routerLink="/intermediate-categories">
+          MCEC 
+          </button>
+       
+      </li>
+      
+      
+  </ul>
+  </div>
+  <div class="tab-pane" id="category4" role="tabpanel" aria-labelledby="category4-tab">
+
+  <div class="alert alert-danger text-center" role="alert">
+  This category will be coming soon!
+  </div>
+  <!--  <ul>
+      <li>
+        <img src="../assets/images/categories/category1.png" width="30" height="30"><br/>
+        <label>c4item1</label>
+      </li>
+      <li>
+        <img src="../assets/images/categories/category2.png" width="30" height="30"><br/>
+        <label>c4item2</label>
+      </li>
+      <li>
+        <img src="../assets/images/categories/category3.png" width="30" height="30"><br/>
+        <label>c4item3</label>
+      </li>
+      <li>
+        <img src="../assets/images/categories/category4.png" width="30" height="30"><br/>
+        <label>c4item4</label>
+      </li>
+      <li>
+        <img src="../assets/images/categories/category5.png" width="30" height="30"><br/>
+        <label>c4item5</label>
+      </li>
+      <li>
+        <img src="../assets/images/categories/category5.png" width="30" height="30"><br/>
+        <label>c1item6</label>
+      </li>
+      <li>
+        <img src="../assets/images/categories/category5.png" width="30" height="30"><br/>
+        <label>c4item7</label>
+      </li>
+      <li>
+        <img src="../assets/images/categories/category1.png" width="30" height="30"><br/>
+        <label>c4item8</label>
+      </li>
+      <li>
+        <img src="../assets/images/categories/category5.png" width="30" height="30"><br/>
+        <label>c4item9</label>
+      </li>
+      <li>
+        <img src="../assets/images/categories/category1.png" width="30" height="30"><br/>
+        <label>c4item10</label>
+      </li>
+  </ul>
+ -->  </div>
+  <div class="tab-pane" id="category5" role="tabpanel" aria-labelledby="category5-tab">
+  <div class="alert alert-danger text-center" role="alert">
+  This category will be coming soon!
+  </div>
+   <!--  <ul>
+      <li>
+        <img src="../assets/images/categories/category1.png" width="30" height="30"><br/>
+        <label>c5item1</label>
+      </li>
+      <li>
+        <img src="../assets/images/categories/category2.png" width="30" height="30"><br/>
+        <label>c5item2</label>
+      </li>
+      <li>
+        <img src="../assets/images/categories/category3.png" width="30" height="30"><br/>
+        <label>c5item3</label>
+      </li>
+      <li>
+        <img src="../assets/images/categories/category4.png" width="30" height="30"><br/>
+        <label>c5item4</label>
+      </li>
+      <li>
+        <img src="../assets/images/categories/category5.png" width="30" height="30"><br/>
+        <label>c5item5</label>
+      </li>
+      
+  </ul> -->
+  </div>
+</div>
+      </div>
+
+      <div class="premium-ads">
+      <div class="row white-box premium-ad1">
+        <img src="../assets/images/sliderbanners/banner8.jpg" alt="Premiun Ad1">
+      </div>
+      <div class="row white-box white-second-box col-no-padding">
+        <div class="row white-box premium-ad2 col-sm">
+        <img src="../assets/images/sliderbanners/banner5.jpg" alt="Premiun Ad2">
+        </div>
+        <div class="row white-box premium-ad3 col-sm">
+        <img src="../assets/images/sliderbanners/banner9.jpg" alt="Premiun Ad3">
+        </div>
+      </div> 
+      </div>
+
+
+</main>
+
+

@@ -1,0 +1,18 @@
+.gallery-container ul{
+	justify-content:start;
+}
+
+.facilities a:first-child{
+	border:none;
+}
+
+.tabs-container .tab-content{
+	min-height:0;
+	padding:0;
+}
+
+.tabs-container ul li{
+	margin-bottom:0;
+	border-radius:0;
+	cursor:pointer;
+}
